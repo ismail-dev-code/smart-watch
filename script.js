@@ -20,3 +20,17 @@ for (let i = 0; i < ringBtn.length; i++) {
     productImage.src = "./images/" + color + ".png";
   });
 }
+
+function selectWristSize(size) {
+  const sizes = ["S", "M", "L", "XL"];
+  for (let i = 0; i < sizes.length; i++) {
+    const btnS = document.getElementById("size-" + sizes[i]);
+    const element = sizes[i];
+    if (size === element) {
+      btnS.classList.add("border-purple-600");
+    }
+     else {
+      btnS.classList.remove("border-purple-600");
+    }
+  }
+}
