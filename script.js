@@ -28,9 +28,19 @@ function selectWristSize(size) {
     const element = sizes[i];
     if (size === element) {
       btnS.classList.add("border-purple-600");
-    }
-     else {
+    } else {
       btnS.classList.remove("border-purple-600");
     }
   }
+}
+
+const quantityElements = document.querySelectorAll(".quantity-button");
+for (let btn of quantityElements) {
+  btn.addEventListener("click", function (event) {
+    const amount = event.target.innerText === "+" ? 1 : -1;
+    const quantityElement = document.getElementById("quantity");
+    const currentQuantity = parseInt(quantityElement.innerText);
+    const newQuantity = Math.max(0, currentQuantity + amount);
+    quantityElement.innerText = newQuantity;
+  });
 }
