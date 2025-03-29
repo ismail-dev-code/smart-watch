@@ -57,20 +57,22 @@ document.getElementById("add-to-cart").addEventListener("click", function () {
     cartCount = cartCount + quantity;
     document.getElementById("cart-count").innerText = cartCount;
 
-    // const selectedColorBtn = document.querySelector(
-    //   "button.border-purple-600.w-6"
-    // );
-    // const selectedColor = selectedColorBtn.id.split("-")[0];
+    const selectedColorBtn = document.querySelector(
+      "button.border-purple-600.w-6"
+    );
+    const selectedColor = selectedColorBtn.id.split("-")[0];
 
-    // const selectedSizeBtn = document.querySelector(
-    //   "button.border-purple-600:not(.w-6)"
-    // );
-    // const selectedSize = selectedColorBtn.innerText.split(" ");
-    // console.log(selectedSize);
+    const selectedSizeBtn = document.querySelector(
+      "button.border-purple-600:not(.w-6)"
+    );
+    const selectedSize = selectedColorBtn.innerText.split(" ");
+    console.log(selectedSize);
   } else {
     alert("Please select a Quantity");
   }
 });
+
+document.getElementById('year').textContent = new Date().getFullYear();
 
 // const quantityElement = document.querySelectorAll(".quantity-button");
 // for (let btn of quantityElement) {
